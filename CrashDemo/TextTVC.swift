@@ -9,7 +9,8 @@
 import UIKit
 import SwiftyFORM
 
-class TextTVC: UITableViewCell, UITextFieldDelegate, CellHeightProvider {
+class TextTVC: UITableViewCell, UITextFieldDelegate {
+//class TextTVC: UITableViewCell, UITextFieldDelegate, CellHeightProvider {
 
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var textField: UITextField!
@@ -39,10 +40,10 @@ class TextTVC: UITableViewCell, UITextFieldDelegate, CellHeightProvider {
         }
     }
     
-    public func form_cellHeight(indexPath: IndexPath, tableView: UITableView) -> CGFloat {
-        return xibHeight
-    }
-    
+//    public func form_cellHeight(indexPath: IndexPath, tableView: UITableView) -> CGFloat {
+//        return xibHeight
+//    }
+	
     public typealias TextDidChangeBlock = (_ value: String) -> Void
     public var textDidChangeBlock: TextDidChangeBlock = { (value: String) in
         
