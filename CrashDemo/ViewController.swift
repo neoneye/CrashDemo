@@ -19,52 +19,49 @@ class ViewController: FormViewController {
 
     
     override func populate(_ builder: FormBuilder) {
-        
-        
         builder += topTitle
         
         builder += projectNumber
-        builder += spaceView
+        builder += createSpaceView()
         //-----
         builder += propertyName
-        builder += spaceView
+        builder += createSpaceView()
         //-----
         builder += unitNumber
         //-----
         //-----
         builder += formTitle
         builder += ownerDatePicker
-        builder += spaceView
+        builder += createSpaceView()
         //-----
         builder += ownerRepName
-        builder += spaceView
+        builder += createSpaceView()
         //-----
         builder += ownerSignature
-        builder += spaceView
+        builder += createSpaceView()
         //-----
         builder += katerraDatePicker
-        builder += spaceView
+        builder += createSpaceView()
         //-----
         builder += katerraRepName
-        builder += spaceView
+        builder += createSpaceView()
         //-----
         builder += katerraSignature
-        builder += spaceView
+        builder += createSpaceView()
         //-----
         builder += submit
     }
     
     //MARK: - BUILDER -
-    
-    lazy var spaceView: SectionHeaderViewFormItem = {
-        
-        let headerView = SectionHeaderViewFormItem()
-        headerView.viewBlock = {
-            return InfoView(frame: CGRect(x: 0, y: 0, width: 100, height: 2), text: " ")
-        }
-        return headerView
-    } ()
-    
+	
+	func createSpaceView() -> FormItem {
+		let headerView = SectionHeaderViewFormItem()
+		headerView.viewBlock = {
+			return InfoView(frame: CGRect(x: 0, y: 0, width: 100, height: 2), text: " ")
+		}
+		return headerView
+	}
+
     lazy var projectNumber: CustomFormItem = {
         
         let instance = CustomFormItem()
