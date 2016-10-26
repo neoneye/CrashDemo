@@ -30,7 +30,7 @@ class ViewController: FormViewController {
         builder += unitNumber
         //-----
         //-----
-        builder += formTitle
+		builder += TextFieldFormItem()
         builder += ownerDatePicker
         builder += createSpaceView()
         //-----
@@ -113,12 +113,6 @@ class ViewController: FormViewController {
     lazy var topTitle: SectionHeaderTitleFormItem = {
         let instance = SectionHeaderTitleFormItem()
         instance.title = "I HEREBY CERTIFY THAT THE AGREED UPON SCOPE OF WORK HAS BEEN SATISFIED, AND I AM ACCEPTING THE TURNOVER OF THIS UNIT."
-        return instance
-    }()
-    
-    lazy var formTitle: SectionHeaderTitleFormItem = {
-        let instance = SectionHeaderTitleFormItem()
-        instance.title = "FORM SIGNATURE"
         return instance
     }()
     
